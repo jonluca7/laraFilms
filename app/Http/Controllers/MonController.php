@@ -14,9 +14,9 @@ class MonController extends Controller
  
     // Methode qui contiendra la logique d'une Premiere route
 
-    public function greetings()
+    public function greetings(string $name)
     {
-        return '<header> Bienvenue chez toi !!! </header>';
+        return '<header> Bienvenue chez toi : '.$name.' !!! </header>';
 
     }
 }

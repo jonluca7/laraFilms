@@ -25,7 +25,7 @@ Route::get('/{name}', function (string $name) {
 
 **/
 
-Route ::get('/greetings/',
+Route ::get('/greetings/{name}',
     [MonController ::class, 'greetings']
     
     );
