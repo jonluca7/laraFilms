@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return "<h1>Hello world</h1>";
 });
 
 
 Route::get('/{name}', function (string $name) {
-    return "<h1>Hello $name !</h1>";
+    return '<h1>Hello '.$name.' !</h1>';
 });
+
+**/
+
+Route ::get('/greetings/',
+    [MonController ::class, 'greetings']
+    
+    );
