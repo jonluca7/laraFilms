@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MonController;
 
@@ -22,14 +23,13 @@ Route ::get('/', function () {
 **/
 
 
-Route::get('/{name}', function (string $name) {
-    return view('hello', 
-    ['name' => $name]);
-});
+Route::get('/{name}', [HelloController::class, 'hello']);
 
 
 
+/*
 Route ::get('/greetings/{name}',
     [MonController ::class, 'greetings']
     
     );
+**/
