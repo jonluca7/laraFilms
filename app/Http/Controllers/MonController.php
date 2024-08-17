@@ -17,6 +17,10 @@ class MonController extends Controller
     public function greetings(string $name, request $request)
     {
 
+         if($request->get('age') < 0){
+            return redirect('/');
+         }
+
         $you = $request->get('age') >= 18 ? 'vous' : 'toi';
 
         return '<header> Bienvenue chez  '.$you.' : '.$name.' !!! </header>';
