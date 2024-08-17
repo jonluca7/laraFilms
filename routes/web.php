@@ -15,16 +15,19 @@ use App\Http\Controllers\MonController;
 |
 */
 
-/*Route::get('/', function () {
-    return "<h1>Hello world</h1>";
+/*
+Route ::get('/', function () {
+    return "<h2>Bienvenue sur la page d'accueil</h2>";
 });
+**/
 
 
 Route::get('/{name}', function (string $name) {
-    return '<h1>Hello '.$name.' !</h1>';
+    return view('hello', 
+    ['name' => $name]);
 });
 
-**/
+
 
 Route ::get('/greetings/{name}',
     [MonController ::class, 'greetings']
