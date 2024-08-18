@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MonController;
@@ -22,7 +23,8 @@ Route ::get('/', function () {
 });
 **/
 
-
+Route::get('/{actor}', [HelloController::class, 'helloActor']);
+Route::get('/{id}', [HelloController::class, 'helloActorId']);
 Route::get('/{name}', [HelloController::class, 'hello']);
 
 
